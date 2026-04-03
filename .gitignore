@@ -1,0 +1,11 @@
+# Document
+*.log
+db.json
+.DS_Store
+Thumbs.db
+_multiconfig.yml
+
+# Folder
+public/
+.deploy*/
+node_modules/
