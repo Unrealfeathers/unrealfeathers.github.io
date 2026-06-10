@@ -72,7 +72,7 @@ Host Ubuntu-Cloud
 
 Open OCD 启动时需要两个核心配置文件：**接口脚本（Interface）和目标芯片脚本（Target）**；我使用的是 **DAP-Link**，先将 **DAP-Link** 连接到 Windows 电脑，在终端输入如下命令：
 
-```Shell
+```Bash
 # GD32F103 的内核和调试逻辑与 STM32F103 基本兼容，直接使用 `target/stm32f1x.cfg` 通常是可以直接工作的；
 # -f 后面接的是调试器配置文件，-f 后面接的是芯片配置文件；
 openocd -f interface/cmsis-dap.cfg -f target/stm32f1x.cfg
@@ -90,7 +90,7 @@ Info : Listening on port 3333 for gdb connections
 
 ### 2.1 安装交叉编译工具链和调试器
 
-```Shell
+```Bash
 sudo apt update
 sudo apt install git make cmake build-essential -y
 sudo apt install gcc-arm-none-eabi gdb-multiarch binutils-arm-none-eabi -y
@@ -268,7 +268,7 @@ VS Code 调试配置：
 
 ### 4.1 手动编译流程
 
-```Shell
+```Bash
 # 1. 生成 Makefile
 cmake -B build -DCMAKE_TOOLCHAIN_FILE=toolchain.cmake
 
