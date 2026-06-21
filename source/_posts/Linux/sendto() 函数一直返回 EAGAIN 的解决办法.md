@@ -36,9 +36,9 @@ permalink: /posts/20260531-190631.html
 设置 SNDBUF 缓冲区长度：
 
 ```C
-    /* 设置发送缓冲区为 2MB */
-    int send_buf_size = 2 * 1024 * 1024; 
-    setsockopt(sock_fd, SOL_SOCKET, SO_SNDBUF, &send_buf_size, sizeof(send_buf_size));
+/* 设置发送缓冲区为 2MB */
+int send_buf_size = 2 * 1024 * 1024; 
+setsockopt(sock_fd, SOL_SOCKET, SO_SNDBUF, &send_buf_size, sizeof(send_buf_size));
 ```
 
 这时需要在命令行输入以下命令：
@@ -61,16 +61,16 @@ net.core.wmem_default = 212992
 为了验证这个问题，修改程序如下：
 
 ```C
-    /* 设置发送缓冲区为 2MB */
-    int send_buf_size = 2 * 1024 * 1024;
-    int ret = setsockopt(sock_fd, SOL_SOCKET, SO_SNDBUF, &send_buf_size, sizeof(send_buf_size));
-    if (ret == 0) {
-        int actual_buf_size = 0;
-        socklen_t optlen = sizeof(actual_buf_size);
-        getsockopt(sock_fd, SOL_SOCKET, SO_SNDBUF, &actual_buf_size, &optlen);
+/* 设置发送缓冲区为 2MB */
+int send_buf_size = 2 * 1024 * 1024;
+int ret = setsockopt(sock_fd, SOL_SOCKET, SO_SNDBUF, &send_buf_size, sizeof(send_buf_size));
+if (ret == 0) {
+    int actual_buf_size = 0;
+    socklen_t optlen = sizeof(actual_buf_size);
+    getsockopt(sock_fd, SOL_SOCKET, SO_SNDBUF, &actual_buf_size, &optlen);
 
-        printf("Requested SNDBUF: %d, Actual SNDBUF: %d, ret %d;\r\n", send_buf_size, actual_buf_size, ret);
-    }
+    printf("Requested SNDBUF: %d, Actual SNDBUF: %d, ret %d;\r\n", send_buf_size, actual_buf_size, ret);
+}
 ```
 
 输出：

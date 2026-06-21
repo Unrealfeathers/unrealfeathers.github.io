@@ -1,5 +1,5 @@
 ---
-title: 使用 frp 进行 ssh 连接
+title: 使用 Frp 进行 SSH 连接
 date:  2026-05-23 18:57:29
 
 math: false
@@ -10,10 +10,10 @@ categories:
   - Linux
 
 tags:
-  - frp
-  - ssh
+  - Frp
+  - SSH
 
-excerpt: "使用 frp 来让本地电脑 ssh 到远程 Windows 11 主机上的 Ubuntu 虚拟机"
+excerpt: "使用 Frp 来让本地电脑 SSH 到远程 Windows 11 主机上的 Ubuntu 虚拟机"
 permalink: /posts/20260523-185729.html
 ---
 ## 1. 环境
@@ -29,7 +29,7 @@ permalink: /posts/20260523-185729.html
 
 1. 下载对应系统版本的 frp 软件；
 2. 请在云服务器的控制台确保 7000 和 6000 端口已经放行，两个端口均使用 TCP 协议；
-3. 确保远程 Windows 主机可以 ping 通虚拟机的 IP，并可以进行 ssh 连接；
+3. 确保远程 Windows 主机可以 ping 通虚拟机的 IP，并可以进行 SSH 连接；
 
 ## 3. 部署 frp
 
@@ -74,7 +74,7 @@ serverPort = 7000          # 必须与 frps.toml 中的 bindPort 一致
 name = "ssh"
 type = "tcp"
 localIP = "192.168.1.2"    # Ubuntu 虚拟机的 IP，千万不要填 127.0.0.1
-localPort = 22             # Ubuntu 虚拟机的 ssh 端口
+localPort = 22             # Ubuntu 虚拟机的 SSH 端口
 remotePort = 6000          # 暴露在云服务器上的端口
 ```
 
