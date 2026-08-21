@@ -60,3 +60,21 @@ ncu -u
 ```Bash
 npm install
 ```
+
+如果输出以下报错：
+
+```Text
+npm warn install-scripts 4 packages had install scripts blocked because they are not covered by allowScripts:
+npm warn install-scripts   hexo-util@3.3.0 (postinstall: npm run build:highlight)
+npm warn install-scripts   hexo-util@3.3.0 (postinstall: npm run build:highlight)
+npm warn install-scripts   hexo-util@3.3.0 (postinstall: npm run build:highlight)
+npm warn install-scripts   hexo-util@4.0.0 (postinstall: npm run build:highlight)
+npm warn install-scripts
+npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+```
+
+请进行手动审批：
+
+```Bash
+npm install-scripts approve hexo-util
+```
