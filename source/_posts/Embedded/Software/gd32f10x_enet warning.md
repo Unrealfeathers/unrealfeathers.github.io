@@ -13,7 +13,7 @@ tags:
   - C
   - GD32
 
-excerpt: "'enet_default_init' declared 'static' but never defined [-Wunused-function] 'enet_delay' declared 'static' but never defined [-Wunused-function]"
+excerpt: "'enet_default_init' declared 'static' but never defined [-Wunused-function] & 'enet_delay' declared 'static' but never defined [-Wunused-function]"
 permalink: /posts/20260327-184610.html
 ---
 ## 1. 报错信息
