@@ -23,8 +23,8 @@ permalink: /posts/20221001-210637.html
 ## 附录
 
 1. 文件列表
-  > * 大学物理ⅠB-作业答案.zip
+  > * 大学物理IB 作业答案集.zip
 
 2. 下载地址
-  > * 蓝奏云链接：https://unrealfeathers.lanzouu.com/iCexZ2sqyo3i
-  > * 蓝奏云提取密码：1d44
+  > * 蓝奏云链接：https://unrealfeathers.lanzouu.com/ib6cv45sc18j
+  > * 蓝奏云提取密码：20qo
